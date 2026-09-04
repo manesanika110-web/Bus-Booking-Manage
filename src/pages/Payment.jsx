@@ -25,11 +25,15 @@ function Payment() {
   const bus = state?.bus;
   const selectedSeats = state?.selectedSeats || [];
   const passenger = state?.passenger;
-  const searchDate = state?.date || bus?.date || new Date().toISOString().split("T")[0];
-  const boardingPoint = state?.boardingPoint || `${bus?.from || "Origin"} Stand`;
-  const droppingPoint = state?.droppingPoint || `${bus?.to || "Destination"} Stand`;
+  const searchDate =
+    state?.date || bus?.date || new Date().toISOString().split("T")[0];
+  const boardingPoint =
+    state?.boardingPoint || `${bus?.from || "Origin"} Stand`;
+  const droppingPoint =
+    state?.droppingPoint || `${bus?.to || "Destination"} Stand`;
 
-  const baseFare = state?.baseFare || selectedSeats.length * (bus?.price || 500);
+  const baseFare =
+    state?.baseFare || selectedSeats.length * (bus?.price || 500);
   const gstAmount = state?.gstAmount || Math.round(baseFare * 0.05);
   const initialTotal = state?.totalAmount || baseFare + gstAmount;
 
@@ -93,7 +97,7 @@ function Payment() {
 
   const handleApplyCoupon = () => {
     const code = couponCode.trim().toUpperCase();
-    if (code === "BUSVISTA50" || code === "SAVE50" || code === "FIRSTBUS") {
+    if (code === "TRIPVISTA50" || code === "SAVE50" || code === "FIRSTBUS") {
       setDiscount(50);
       setCouponApplied(true);
       setCouponMessage("Coupon applied successfully! You saved ₹50.");
@@ -102,7 +106,7 @@ function Payment() {
       setDiscount(0);
       setCouponApplied(false);
       setCouponMessage("");
-      setError("Invalid Coupon Code. Try 'BUSVISTA50'.");
+      setError("Invalid Coupon Code. Try 'TRIPVISTA50'.");
     }
   };
 
@@ -123,7 +127,9 @@ function Payment() {
     if (paymentMethod === "upi") {
       if (upiMethod === "id") {
         if (!upiId.includes("@") || upiId.length < 5) {
-          setError("Please enter a valid UPI ID (e.g. yourname@oksbi / 9876543210@paytm).");
+          setError(
+            "Please enter a valid UPI ID (e.g. yourname@oksbi / 9876543210@paytm).",
+          );
           return;
         }
       }
@@ -323,42 +329,174 @@ function Payment() {
                     >
                       <rect width="200" height="200" fill="#ffffff" />
                       {/* Top Left Marker */}
-                      <rect x="20" y="20" width="50" height="50" fill="#0f172a" />
-                      <rect x="30" y="30" width="30" height="30" fill="#ffffff" />
-                      <rect x="38" y="38" width="14" height="14" fill="#0f172a" />
+                      <rect
+                        x="20"
+                        y="20"
+                        width="50"
+                        height="50"
+                        fill="#0f172a"
+                      />
+                      <rect
+                        x="30"
+                        y="30"
+                        width="30"
+                        height="30"
+                        fill="#ffffff"
+                      />
+                      <rect
+                        x="38"
+                        y="38"
+                        width="14"
+                        height="14"
+                        fill="#0f172a"
+                      />
 
                       {/* Top Right Marker */}
-                      <rect x="130" y="20" width="50" height="50" fill="#0f172a" />
-                      <rect x="140" y="30" width="30" height="30" fill="#ffffff" />
-                      <rect x="148" y="38" width="14" height="14" fill="#0f172a" />
+                      <rect
+                        x="130"
+                        y="20"
+                        width="50"
+                        height="50"
+                        fill="#0f172a"
+                      />
+                      <rect
+                        x="140"
+                        y="30"
+                        width="30"
+                        height="30"
+                        fill="#ffffff"
+                      />
+                      <rect
+                        x="148"
+                        y="38"
+                        width="14"
+                        height="14"
+                        fill="#0f172a"
+                      />
 
                       {/* Bottom Left Marker */}
-                      <rect x="20" y="130" width="50" height="50" fill="#0f172a" />
-                      <rect x="30" y="140" width="30" height="30" fill="#ffffff" />
-                      <rect x="38" y="148" width="14" height="14" fill="#0f172a" />
+                      <rect
+                        x="20"
+                        y="130"
+                        width="50"
+                        height="50"
+                        fill="#0f172a"
+                      />
+                      <rect
+                        x="30"
+                        y="140"
+                        width="30"
+                        height="30"
+                        fill="#ffffff"
+                      />
+                      <rect
+                        x="38"
+                        y="148"
+                        width="14"
+                        height="14"
+                        fill="#0f172a"
+                      />
 
                       {/* Simulated QR Data Matrix Blocks */}
-                      <rect x="80" y="25" width="12" height="12" fill="#0f172a" />
-                      <rect x="100" y="25" width="16" height="12" fill="#0f172a" />
-                      <rect x="80" y="45" width="20" height="10" fill="#0f172a" />
-                      <rect x="105" y="45" width="14" height="25" fill="#0f172a" />
-                      <rect x="80" y="80" width="40" height="40" fill="#2563eb" rx="6" />
-                      <rect x="25" y="85" width="15" height="15" fill="#0f172a" />
-                      <rect x="50" y="95" width="18" height="12" fill="#0f172a" />
-                      <rect x="135" y="85" width="18" height="18" fill="#0f172a" />
-                      <rect x="160" y="100" width="15" height="15" fill="#0f172a" />
-                      <rect x="85" y="135" width="20" height="15" fill="#0f172a" />
-                      <rect x="110" y="140" width="15" height="25" fill="#0f172a" />
-                      <rect x="135" y="135" width="40" height="15" fill="#0f172a" />
-                      <rect x="145" y="160" width="30" height="15" fill="#0f172a" />
+                      <rect
+                        x="80"
+                        y="25"
+                        width="12"
+                        height="12"
+                        fill="#0f172a"
+                      />
+                      <rect
+                        x="100"
+                        y="25"
+                        width="16"
+                        height="12"
+                        fill="#0f172a"
+                      />
+                      <rect
+                        x="80"
+                        y="45"
+                        width="20"
+                        height="10"
+                        fill="#0f172a"
+                      />
+                      <rect
+                        x="105"
+                        y="45"
+                        width="14"
+                        height="25"
+                        fill="#0f172a"
+                      />
+                      <rect
+                        x="80"
+                        y="80"
+                        width="40"
+                        height="40"
+                        fill="#2563eb"
+                        rx="6"
+                      />
+                      <rect
+                        x="25"
+                        y="85"
+                        width="15"
+                        height="15"
+                        fill="#0f172a"
+                      />
+                      <rect
+                        x="50"
+                        y="95"
+                        width="18"
+                        height="12"
+                        fill="#0f172a"
+                      />
+                      <rect
+                        x="135"
+                        y="85"
+                        width="18"
+                        height="18"
+                        fill="#0f172a"
+                      />
+                      <rect
+                        x="160"
+                        y="100"
+                        width="15"
+                        height="15"
+                        fill="#0f172a"
+                      />
+                      <rect
+                        x="85"
+                        y="135"
+                        width="20"
+                        height="15"
+                        fill="#0f172a"
+                      />
+                      <rect
+                        x="110"
+                        y="140"
+                        width="15"
+                        height="25"
+                        fill="#0f172a"
+                      />
+                      <rect
+                        x="135"
+                        y="135"
+                        width="40"
+                        height="15"
+                        fill="#0f172a"
+                      />
+                      <rect
+                        x="145"
+                        y="160"
+                        width="30"
+                        height="15"
+                        fill="#0f172a"
+                      />
                     </svg>
-                    <div className="qr-badge-amount">
-                      ₹{finalPayable}
-                    </div>
+                    <div className="qr-badge-amount">₹{finalPayable}</div>
                   </div>
 
                   <div className="qr-timer-pill">
-                    <FaClock /> QR Code expires in <strong>{formatTime(timeLeft)}</strong>
+                    <FaClock /> QR Code expires in{" "}
+                    <strong>{formatTime(timeLeft)}</strong>
                   </div>
 
                   <div className="upi-app-logos">
@@ -476,7 +614,9 @@ function Payment() {
                     type="password"
                     placeholder="123"
                     value={cvv}
-                    onChange={(e) => setCvv(e.target.value.replace(/\D/g, "").slice(0, 3))}
+                    onChange={(e) =>
+                      setCvv(e.target.value.replace(/\D/g, "").slice(0, 3))
+                    }
                     maxLength="3"
                   />
                 </div>
@@ -487,7 +627,9 @@ function Payment() {
           {/* TAB 3: NET BANKING */}
           {paymentMethod === "netbanking" && (
             <div className="payment-tab-content">
-              <p className="tab-subtext">Select your preferred Net Banking provider:</p>
+              <p className="tab-subtext">
+                Select your preferred Net Banking provider:
+              </p>
               <div className="bank-grid">
                 {[
                   { id: "sbi", name: "State Bank of India" },
@@ -505,7 +647,9 @@ function Payment() {
                   >
                     <FaBuildingColumns className="bank-icon" />
                     <span>{bank.name}</span>
-                    {selectedBank === bank.id && <FaCheck className="bank-check" />}
+                    {selectedBank === bank.id && (
+                      <FaCheck className="bank-check" />
+                    )}
                   </button>
                 ))}
               </div>
@@ -530,7 +674,9 @@ function Payment() {
           {/* TAB 4: WALLETS */}
           {paymentMethod === "wallet" && (
             <div className="payment-tab-content">
-              <p className="tab-subtext">Choose your digital wallet for 1-click checkout:</p>
+              <p className="tab-subtext">
+                Choose your digital wallet for 1-click checkout:
+              </p>
               <div className="wallets-grid">
                 {[
                   { id: "phonepe", name: "PhonePe Wallet" },
@@ -546,7 +692,9 @@ function Payment() {
                   >
                     <FaWallet className="wallet-icon" />
                     <strong>{w.name}</strong>
-                    {selectedWallet === w.id && <FaCheck className="wallet-check" />}
+                    {selectedWallet === w.id && (
+                      <FaCheck className="wallet-check" />
+                    )}
                   </button>
                 ))}
               </div>
@@ -563,7 +711,8 @@ function Payment() {
               Pay ₹{finalPayable} Securely
             </button>
             <div className="security-notice">
-              <FaLock /> By clicking Pay, you agree to BusVista terms and privacy policies.
+              <FaLock /> By clicking Pay, you agree to BusVista terms and
+              privacy policies.
             </div>
           </div>
         </div>
@@ -579,7 +728,7 @@ function Payment() {
             <div className="coupon-input-flex">
               <input
                 type="text"
-                placeholder="Enter 'BUSVISTA50'"
+                placeholder="Enter 'TRIPVISTA50'"
                 value={couponCode}
                 onChange={(e) => setCouponCode(e.target.value)}
                 disabled={couponApplied}
@@ -624,11 +773,16 @@ function Payment() {
                 <span className="bus-type-pill">{bus.type}</span>
               </div>
               <p className="route-text">
-                {bus.from} <FaArrowLeft style={{ transform: "rotate(180deg)" }} /> {bus.to}
+                {bus.from}{" "}
+                <FaArrowLeft style={{ transform: "rotate(180deg)" }} /> {bus.to}
               </p>
               <div className="trip-time-box">
-                <span><FaCalendarDay /> {searchDate}</span>
-                <span><FaClock /> {bus.departure}</span>
+                <span>
+                  <FaCalendarDay /> {searchDate}
+                </span>
+                <span>
+                  <FaClock /> {bus.departure}
+                </span>
               </div>
             </div>
 
@@ -688,15 +842,21 @@ function Payment() {
           <div className="processing-modal">
             <div className="processing-spinner"></div>
             <h3>Processing Payment Securely</h3>
-            <p className="processing-subtext">Please do not refresh or close the page.</p>
+            <p className="processing-subtext">
+              Please do not refresh or close the page.
+            </p>
 
             <div className="processing-steps-list">
               <div className={`step-row ${processingStep >= 1 ? "done" : ""}`}>
-                <span className="step-circle">{processingStep > 1 ? "✔" : "1"}</span>
+                <span className="step-circle">
+                  {processingStep > 1 ? "✔" : "1"}
+                </span>
                 <span>Connecting to Payment Gateway</span>
               </div>
               <div className={`step-row ${processingStep >= 2 ? "done" : ""}`}>
-                <span className="step-circle">{processingStep > 2 ? "✔" : "2"}</span>
+                <span className="step-circle">
+                  {processingStep > 2 ? "✔" : "2"}
+                </span>
                 <span>Authorizing Transaction with Bank</span>
               </div>
               <div className={`step-row ${processingStep >= 3 ? "done" : ""}`}>

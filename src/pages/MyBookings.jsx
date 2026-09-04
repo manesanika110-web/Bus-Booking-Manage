@@ -41,7 +41,7 @@ const MyBookings = () => {
   useEffect(() => {
     const loadBookings = () => {
       const fallbackKeyBookings = JSON.parse(
-        localStorage.getItem("busvista_bookings") || "[]",
+        localStorage.getItem("tripvista_bookings") || "[]",
       );
       const savedBookings = JSON.parse(
         localStorage.getItem("bookings") || "[]",
@@ -81,7 +81,7 @@ const MyBookings = () => {
     const email = toDisplayText(item.passenger?.email, "passenger@example.com");
     const busName = toDisplayText(
       item.bus?.name || item.name,
-      "BusVista Express",
+      "TripVista Express",
     );
     const busType = toDisplayText(item.bus?.type, "AC Sleeper");
     const fromCity = toDisplayText(item.bus?.from, "Sangli");

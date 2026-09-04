@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 
 export const successAlert = (message) => {
   Swal.fire({
-    title: "BusVista",
+    title: "TripVista",
     text: message,
     icon: "success",
     confirmButtonColor: "#1A3B8B",
@@ -13,7 +13,7 @@ export const successAlert = (message) => {
 
 export const errorAlert = (message) => {
   Swal.fire({
-    title: "BusVista",
+    title: "TripVista",
     text: message,
     icon: "error",
     confirmButtonColor: "#d33",
@@ -23,7 +23,7 @@ export const errorAlert = (message) => {
 
 export const warningAlert = (message) => {
   Swal.fire({
-    title: "BusVista",
+    title: "TripVista",
     text: message,
     icon: "warning",
     confirmButtonColor: "#f59e0b",

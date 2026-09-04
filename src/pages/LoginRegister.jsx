@@ -69,7 +69,7 @@ function LoginRegister() {
     <div className="auth-page-container">
       <div className="auth-card">
         <div className="auth-visual-panel">
-          <div className="brand-badge">BusVista</div>
+          <div className="brand-badge">TripVista</div>
           <h2>{isLogin ? "Welcome back" : "Create your account"}</h2>
           <p>
             {isLogin
@@ -95,7 +95,7 @@ function LoginRegister() {
 
         <div className="auth-form-panel">
           <div className="auth-header">
-            <h3>{isLogin ? "LOGIN TO BUSVISTA" : "CREATE ACCOUNT"}</h3>
+            <h3>{isLogin ? "LOGIN TO TRIPVISTA" : "CREATE ACCOUNT"}</h3>
           </div>
 
           <form className="auth-body" onSubmit={handleSubmit}>

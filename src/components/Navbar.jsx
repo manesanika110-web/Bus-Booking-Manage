@@ -65,7 +65,7 @@ function Navbar() {
           }}
         >
           <FaBusAlt className="logo-icon" />
-          <h2>BusVista</h2>
+          <h2>TripVista</h2>
         </Link>
       </div>
 

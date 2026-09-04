@@ -28,7 +28,7 @@ const normalizeBooking = (raw = {}) => {
     bookingId,
     pnr: text(raw.pnr, `PBK${bookingId.slice(-6)}`),
     travelDate: text(raw.travelDate || bus.date || raw.date, "2026-09-05"),
-    busName: text(bus.name || raw.busName, "BusVista Express"),
+    busName: text(bus.name || raw.busName, "TripVista Express"),
     busType: text(bus.type || raw.busType, "AC Sleeper"),
     passengerName: text(passenger.name || raw.passengerName, "Passenger"),
     mobile: text(passenger.mobile || raw.mobile, "9876543210"),
@@ -82,7 +82,7 @@ const ETicket = () => {
       const x = (pageWidth - width) / 2;
       const y = (pageHeight - height) / 2;
       pdf.addImage(image, "PNG", x, y, width, height, undefined, "FAST");
-      pdf.save(`BusVista-Ticket-${booking.pnr}.pdf`);
+      pdf.save(`TripVista-Ticket-${booking.pnr}.pdf`);
     } catch (error) {
       console.error("PDF generation failed:", error);
     } finally {

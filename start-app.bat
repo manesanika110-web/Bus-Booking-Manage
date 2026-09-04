@@ -1,6 +1,6 @@
 @echo off
-title BusVista App Launcher
-echo Starting BusVista Application...
+title TripVista App Launcher
+echo Starting TripVista Application...
 echo.
 start "" "http://localhost:5174/"
 npm run dev

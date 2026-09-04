@@ -49,11 +49,11 @@
 .ticket-badge { display: flex; align-items: center; gap: 5px; padding: 9px 13px; color: #fff; background: #1655ad; border-radius: 8px; font-size: 16px; letter-spacing: .2px; }
 .ticket-reference { display: flex; gap: 52px; font-size: 12px; color: #1e293b; }
 .ticket-reference strong, .ticket-meta-block strong, .ticket-details-grid strong { color: #1552a8; }
-.busvista-lockup { margin-left: auto; display: flex; align-items: center; gap: 9px; }
-.busvista-mark { color: #1660bc; font-size: 30px; }
-.busvista-lockup strong { display: block; color: #152038; font-size: 27px; line-height: 22px; }
-.busvista-lockup strong span { color: #1d61bd; }
-.busvista-lockup small { display: block; color: #26364f; font-size: 8px; margin-top: 5px; }
+.TripVista-lockup { margin-left: auto; display: flex; align-items: center; gap: 9px; }
+.TripVista-mark { color: #1660bc; font-size: 30px; }
+.TripVista-lockup strong { display: block; color: #152038; font-size: 27px; line-height: 22px; }
+.TripVista-lockup strong span { color: #1d61bd; }
+.TripVista-lockup small { display: block; color: #26364f; font-size: 8px; margin-top: 5px; }
 
 .ticket-main-grid { min-height: 120px; display: grid; grid-template-columns: 184px 1fr 150px; border-bottom: 1px solid #d8e0ea; }
 .ticket-trip-meta, .ticket-times { padding: 12px 14px; display: flex; flex-direction: column; justify-content: space-between; }

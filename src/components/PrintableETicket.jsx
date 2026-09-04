@@ -59,13 +59,13 @@ const PrintableETicket = ({ booking }) => {
             Booking ID: <strong>{booking.bookingId}</strong>
           </span>
         </div>
-        <div className="busvista-lockup">
-          <div className="busvista-mark">
+        <div className="TripVista-lockup">
+          <div className="TripVista-mark">
             <FaBus />
           </div>
           <div>
             <strong>
-              Bus<span>Vista</span>
+              Trip<span>Vista</span>
             </strong>
             <small>India&apos;s Premium Smart Bus Booking Network</small>
           </div>
@@ -179,7 +179,7 @@ const PrintableETicket = ({ booking }) => {
       </aside>
 
       <footer className="ticket-footer">
-        <span>♡ &nbsp; Thank you for choosing BusVista!</span>
+        <span>♡ &nbsp; Thank you for choosing TripVista!</span>
         <i />
         <span>
           <FaShieldHalved /> &nbsp; Have a safe and comfortable journey!
