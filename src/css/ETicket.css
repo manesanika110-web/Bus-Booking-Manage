@@ -1,0 +1,107 @@
+.eticket-page-layout {
+  min-height: 100vh;
+  padding: 28px 20px 60px;
+  background: #f1f5f9;
+  color: #172033;
+  font-family: inherit;
+}
+
+.eticket-top-action-bar {
+  max-width: 860px;
+  margin: 0 auto 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.eticket-back-btn,
+.eticket-print-btn,
+.eticket-download-btn-black {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font: 700 13px inherit;
+  cursor: pointer;
+}
+
+.eticket-back-btn,
+.eticket-print-btn { background: #fff; color: #24324a; border: 1px solid #cbd5e1; }
+.eticket-download-btn-black { background: #0f172a; color: #fff; border: 1px solid #0f172a; }
+.eticket-action-buttons { display: flex; gap: 10px; }
+
+.eticket-print-target { max-width: 860px; margin: auto; }
+.printable-eticket {
+  position: relative;
+  min-height: 390px;
+  overflow: hidden;
+  padding-right: 188px;
+  background: #fff;
+  border: 1px solid #b8c9df;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(34, 62, 100, .08);
+  font-family: Arial, sans-serif;
+}
+
+.ticket-header { height: 62px; display: flex; align-items: center; gap: 28px; padding: 0 16px; border-bottom: 1px solid #d8e0ea; }
+.ticket-badge { display: flex; align-items: center; gap: 5px; padding: 9px 13px; color: #fff; background: #1655ad; border-radius: 8px; font-size: 16px; letter-spacing: .2px; }
+.ticket-reference { display: flex; gap: 52px; font-size: 12px; color: #1e293b; }
+.ticket-reference strong, .ticket-meta-block strong, .ticket-details-grid strong { color: #1552a8; }
+.busvista-lockup { margin-left: auto; display: flex; align-items: center; gap: 9px; }
+.busvista-mark { color: #1660bc; font-size: 30px; }
+.busvista-lockup strong { display: block; color: #152038; font-size: 27px; line-height: 22px; }
+.busvista-lockup strong span { color: #1d61bd; }
+.busvista-lockup small { display: block; color: #26364f; font-size: 8px; margin-top: 5px; }
+
+.ticket-main-grid { min-height: 120px; display: grid; grid-template-columns: 184px 1fr 150px; border-bottom: 1px solid #d8e0ea; }
+.ticket-trip-meta, .ticket-times { padding: 12px 14px; display: flex; flex-direction: column; justify-content: space-between; }
+.ticket-trip-meta { border-right: 1px dashed #cad3df; }
+.ticket-times { border-left: 1px dashed #cad3df; }
+.ticket-meta-block small, .ticket-times small, .ticket-details-grid small { display: block; color: #566273; font-size: 9px; font-weight: 700; letter-spacing: .3px; margin-bottom: 5px; }
+.ticket-meta-block strong { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.ticket-meta-block span { display: block; margin: 4px 0 0 24px; font-size: 10px; color: #344054; }
+.ticket-route { display: grid; grid-template-columns: 1fr 1.2fr 1fr; align-items: center; padding: 16px 12px; gap: 12px; }
+.route-city strong { display: block; font-size: 20px; color: #111827; }
+.route-city span { display: block; margin-top: 5px; font-size: 11px; color: #374151; }
+.route-city.destination { text-align: right; }
+.route-line { position: relative; display: flex; align-items: center; gap: 3px; color: #1552a8; }
+.route-line span { flex: 1; border-top: 2px dashed #727b88; }
+.route-line svg { font-size: 17px; }
+.route-line b, .route-line em { position: absolute; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 11px; }
+.route-line b { top: 19px; color: #1f2937; }
+.route-line em { top: 38px; color: #08a75a; font-size: 10px; font-style: normal; font-weight: 700; }
+.ticket-times div + div { margin-top: 8px; }
+.ticket-times strong { display: flex; align-items: center; gap: 8px; color: #1552a8; font-size: 14px; }
+
+.ticket-details-grid { display: grid; grid-template-columns: repeat(4, 1fr); min-height: 126px; border-bottom: 1px solid #d8e0ea; }
+.ticket-details-grid > div { min-width: 0; padding: 10px 12px; border-right: 1px dashed #cad3df; }
+.ticket-details-grid > div:nth-child(4n) { border-right: 0; }
+.ticket-details-grid > div:nth-child(n+5) { border-top: 1px dashed #cad3df; }
+.ticket-details-grid strong { display: flex; align-items: center; gap: 7px; min-width: 0; font-size: 12px; overflow-wrap: anywhere; }
+.seat-chip { width: fit-content; padding: 5px 10px; border: 1px solid #91b8f0; border-radius: 6px; }
+.ticket-details-grid span { display: block; margin-top: 3px; color: #303b4e; font-size: 10px; }
+.ticket-details-grid .fare-value { color: #08a75a; font-size: 17px; }
+.paid-chip { padding: 5px 8px; border: 1px solid #88dbb0; border-radius: 6px; color: #078b4b !important; font-size: 11px !important; }
+.ticket-qr-panel { position: absolute; top: 63px; right: 0; bottom: 45px; width: 188px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px; border-left: 1px dashed #cad3df; }
+.ticket-qr-panel img { width: 92px; height: 92px; padding: 5px; border: 1px solid #cbd5e1; border-radius: 6px; image-rendering: pixelated; }
+.ticket-qr-panel strong { color: #172033; font-size: 11px; }
+.ticket-footer { position: absolute; right: 12px; bottom: 12px; left: 12px; height: 38px; display: flex; justify-content: center; align-items: center; gap: 28px; color: #1552a8; background: #edf4ff; border-radius: 7px; font-size: 12px; font-weight: 700; }
+.ticket-footer i { height: 20px; border-left: 1px solid #b7c6da; }
+
+@media (max-width: 700px) {
+  .eticket-top-action-bar { align-items: stretch; flex-direction: column; }
+  .eticket-action-buttons { display: grid; grid-template-columns: 1fr 1fr; }
+  .printable-eticket { min-width: 700px; transform-origin: top left; }
+  .eticket-print-target { overflow-x: auto; }
+}
+
+@page { size: A4 landscape; margin: 10mm; }
+@media print {
+  body { margin: 0; background: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .eticket-page-layout { min-height: 0; padding: 0; background: #fff; }
+  .no-print { display: none !important; }
+  .eticket-print-target { max-width: none; width: 100%; }
+  .printable-eticket { width: 100%; min-height: 0; box-shadow: none; page-break-inside: avoid; break-inside: avoid; }
+}

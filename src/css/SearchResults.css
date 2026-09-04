@@ -1,0 +1,409 @@
+/* =========================================================
+   PROFESSIONAL DYNAMIC AVAILABLE BUSES (SEARCH RESULTS) STYLES
+   ========================================================= */
+
+.search-results-page {
+  background: #f8fafc;
+  min-height: 100vh;
+  padding: 30px 20px 80px;
+  font-family: inherit;
+  color: #1e293b;
+}
+
+.search-results-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 1. TOP DYNAMIC SEARCH BAR (Matching Img 2) */
+.top-search-bar-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 30px;
+}
+
+.search-bar-form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.search-input-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.search-input-field label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.search-input-field select,
+.search-input-field input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #1e293b;
+  background: #ffffff;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.search-input-field select:focus,
+.search-input-field input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.search-swap-circle-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  cursor: pointer;
+  margin-bottom: 1px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.search-swap-circle-btn:hover {
+  background: #1d4ed8;
+  transform: rotate(180deg) scale(1.08);
+}
+
+.search-submit-main-btn {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  border: none;
+  padding: 14px 34px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  margin-bottom: 1px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  font-family: inherit;
+}
+
+.search-submit-main-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+}
+
+.search-bar-error-msg {
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 12px 0 0 0;
+  text-align: center;
+}
+
+/* 2. RESULTS HEADER & TOP RIGHT "ALL VIEW BUSES" CORNER BUTTON */
+.results-header-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header-left .title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 6px;
+}
+
+.header-left h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.results-count-badge {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.route-summary-text {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0;
+}
+
+.route-summary-text strong {
+  color: #1e293b;
+}
+
+.date-highlight {
+  color: #2563eb;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 4px;
+}
+
+/* TOP RIGHT CORNER "ALL VIEW BUSES" BUTTON */
+.header-right-corner {
+  display: flex;
+  align-items: center;
+}
+
+.all-view-buses-corner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+  font-family: inherit;
+}
+
+.all-view-buses-corner-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.all-view-buses-corner-btn.active {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.3);
+}
+
+.corner-btn-icon {
+  font-size: 17px;
+}
+
+.all-buses-count-pill {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* 3. CONTROLS & FILTER BAR */
+.controls-filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 14px 22px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.type-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 4px;
+}
+
+.type-filter-pill {
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.type-filter-pill:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.type-filter-pill.active {
+  background: #1e293b;
+  color: #ffffff;
+  border-color: #1e293b;
+}
+
+.sort-dropdown-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-dropdown-group label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sort-dropdown-group select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #cbd5e1;
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+  outline: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* 4. BUS LISTING & NO BUSES CARD */
+.buses-list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.no-buses-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 60px 30px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.no-bus-icon {
+  font-size: 56px;
+  color: #94a3b8;
+  margin-bottom: 16px;
+}
+
+.no-buses-card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+
+.no-buses-card p {
+  color: #64748b;
+  font-size: 14px;
+  max-width: 500px;
+  margin: 0 auto 24px;
+}
+
+.reset-search-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.reset-search-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .search-bar-form {
+    flex-wrap: wrap;
+  }
+  .search-input-field {
+    min-width: 45%;
+  }
+  .search-submit-main-btn {
+    width: 100%;
+  }
+  .search-swap-circle-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .search-results-page {
+    padding: 20px 12px;
+  }
+  .top-search-bar-card {
+    padding: 18px 16px;
+  }
+  .search-input-field {
+    min-width: 100%;
+  }
+  .results-header-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-right-corner {
+    width: 100%;
+  }
+  .all-view-buses-corner-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .controls-filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sort-dropdown-group {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .sort-dropdown-group select {
+    flex: 1;
+  }
+}
